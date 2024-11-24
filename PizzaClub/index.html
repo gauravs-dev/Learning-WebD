@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Club</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff0f0;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: #e63946;
+            color: white;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd166;
+        }
+
+        /* Navigation Bar */
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            padding: 10px 20px;
+            background: #9d0208;
+            color: white;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #e63946;
+        }
+
+        /* Home Section */
+        .home {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background: black;
+            color: white;
+            position: relative;
+        }
+
+        .home .description {
+            flex: 1 1 50%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            color: #ffd166;
+        }
+
+        .home .image-container {
+            flex: 1 1 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .home .image-container img {
+            height: 250px;
+            object-fit: contain;
+            animation: levitate 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes levitate {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+
+        .home button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #e63946;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .home button:hover {
+            background: #9d0208;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 50px 20px;
+            background: #fff0f0;
+        }
+
+        .menu-section h2 {
+            text-align: center;
+            color: #e63946;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-card, .combo-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-card:hover, .combo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-card h3, .combo-card h3 {
+            color: #e63946;
+            margin-bottom: 15px;
+        }
+
+        .menu-card ul, .combo-card ul {
+            padding: 0;
+        }
+
+        .menu-card ul li, .combo-card ul li {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 20px;
+            background: #ffe1e1;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #e63946;
+            margin-bottom: 20px;
+        }
+
+        .contact p, .contact a {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .contact a {
+            color: #e63946;
+            font-weight: bold;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #e63946;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="logo.png" alt="Pizza Club Logo"> <!-- Replace with logo -->
+        <h1>Pizza Club</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#review">Review</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="description">
+            <p>
+                Welcome to Pizza Club, where we serve the finest pizzas, delicious combos, and much more. Our recipes are inspired by a passion for quality ingredients and incredible taste. Whether you're craving classic cheese pizzas, unique combinations, or exciting combo offers, we've got something for every taste. Our pizza dough is made fresh daily, and we source the best ingredients to deliver an unforgettable dining experience. Join us today and discover why Pizza Club is the favorite pizza cafe in town. From our signature pizzas to mouth-watering sides, each bite is a flavor explosion that will leave you wanting more. Order your favorite dish now and enjoy our best-selling pizzas, pasta, and desserts, all in one place. 
+            </p>
+            <button onclick="window.location='#contact'">Order Now</button>
+        </div>
+        <div class="image-container">
+            <img src="pizza-slice.png" alt="Levitating Pizza Slice"> <!-- Replace with actual pizza image -->
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-container">
+            <!-- Combo Offers -->
+            <div class="combo-card">
+                <h3>Combo Offers</h3>
+                <ul>
+                    <li><strong>Burger + Cold Coffee</strong> for 99/-</li>
+                    <li><strong>Paneer Fried Rice + Cold Coffee</strong> for 129/-</li>
+                    <li><strong>American Peri Peri Pizza + Sezwan Noodle + Cold Coffee</strong> for 229/-</li>
+                </ul>
+            </div>
+
+            <!-- Noodles Section -->
+            <div class="menu-card">
+                <h3>Noodles</h3>
+                <ul>
+                    <li>White Noodle 49/-</li>
+                    <li>Sejwan Noodle 49/-</li>
+                    <li>Paneer Noodle 79/-</li>
+                    <li>Hakka Noodle 89/-</li>
+                    <li>Mushroom Noodle 99/-</li>
+                </ul>
+            </div>
+
+            <!-- Fried Rice Section -->
+            <div class="menu-card">
+                <h3>Fried Rice</h3>
+                <ul>
+                    <li>Fried Rice 49/-</li>
+                    <li>Sejwan Rice 59/-</li>
+                    <li>Manchurian Rice 69/-</li>
+                    <li>Paneer Rice 79/-</li>
+                    <li>Mushroom Rice 99/-</li>
+                </ul>
+            </div>
+
+            <!-- Chinese Tadka Section -->
+            <div class="menu-card">
+                <h3>Chinese Tadka</h3>
+                <ul>
+                    <li>Chili Potato 49/-</li>
+                    <li>Hony Choli Potato 69/-</li>
+                    <li>Manchurian Curry 65/-</li>
+                    <li>Manchurian Dry 65/-</li>
+                </ul>
+            </div>
+
+            <!-- Pizza Section -->
+            <div class="menu-card">
+                <h3>Pizza</h3>
+                <ul>
+                    <li>American Pizza 199/-</li>
+                    <li>Delightful Pizza 199/-</li>
+                    <li>Pepperoni Pizza 229/-</li>
+                    <li>Pasta Pizza 259/-</li>
+                    <li>Pineapple Pizza 229/-</li>
+                </ul>
+            </div>
+
+            <!-- Pasta Section -->
+            <div class="menu-card">
+                <h3>Pasta</h3>
+                <ul>
+                    <li>Delight Pasta 129/-</li>
+                    <li>American Pasta 159/-</li>
+                    <li>Mixed Pasta 179/-</li>
+                    <li>Cheese Pasta 199/-</li>
+                </ul>
+            </div>
+
+            <!-- Drinks Section -->
+            <div class="menu-card">
+                <h3>Drinks</h3>
+                <ul>
+                    <li>Cold Coffee 39/-</li>
+                    <li>Coffee 39/-</li>
+                    <li>Cocktail 49/-</li>
+                    <li>Juice 49/-</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>📞 <strong>Call Us To Order Now: +91 9876543210</strong></p>
+        <p>WhatsApp: +91 9876543210</p>
+        <p>Email: pizzaclub@example.com</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pizza Club. All rights reserved.</p>
+    </footer>
+</body>
+</html>
